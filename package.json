@@ -1,0 +1,32 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headtest": "npx cypress run --headed",
+    "chrome": "npx cypress run --browser chrome",
+    "recorddashboard": "npx cypress run --record --key 44b85137-b63e-4952-b16e-173249941a4a",
+    "GAED": "npx cypress run --spec \"cypress/integration/example/GAED/*.js\""
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/plugin-transform-object-rest-spread": "^7.27.2",
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@types/cypress": "^1.1.6",
+    "@types/node": "^22.15.15",
+    "cypress": "^14.3.3",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/integration/example/BDD/*.js"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.2",
+    "xlsx": "^0.18.5"
+  }
+}
